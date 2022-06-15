@@ -13,6 +13,12 @@ import (
 func main() {
 	r := mux.NewRouter()
 
+	r.Use(func(h http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			log.Println("New request...", r.URL.Path)
+			h.ServeHTTP(w, r)
+		})
+	})
 	r.HandleFunc("/", handler.Root)
 	r.NotFoundHandler = http.HandlerFunc(handler.NotFound)
 	r.MethodNotAllowedHandler = http.HandlerFunc(handler.MethodNotAllowed)
@@ -24,6 +30,7 @@ func main() {
 		ReadTimeout:  15 * time.Second,
 	}
 
+	log.Println("server listen and serve on port", 8000)
 	if err := srv.ListenAndServe(); err != nil {
 		log.Println("server error:", err)
 		os.Exit(0)
