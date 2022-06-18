@@ -1,0 +1,82 @@
+# INGRESS NGINX SECRET FOR TLS
+apiVersion: v1
+kind: Secret
+metadata:
+  name: nginx-secret-tls
+  namespace: default
+type: kubernetes.io/tls
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVBakNDQW1xZ0F3SUJBZ0lSQUlmRGFocTdaUEhld2F5akt5Z3J6WWt3RFFZSktvWklodmNOQVFFTEJRQXcKVHpFZU1Cd0dBMVVFQ2hNVmJXdGpaWEowSUdSbGRtVnNiM0J0Wlc1MElFTkJNUkl3RUFZRFZRUUxEQWx6YUdGdQpaSGxBYUhBeEdUQVhCZ05WQkFNTUVHMXJZMlZ5ZENCemFHRnVaSGxBYUhBd0hoY05Nakl3TmpFM01UVTBOREF3CldoY05NalF3T1RFM01UVTBOREF3V2pBOU1TY3dKUVlEVlFRS0V4NXRhMk5sY25RZ1pHVjJaV3h2Y0cxbGJuUWcKWTJWeWRHbG1hV05oZEdVeEVqQVFCZ05WQkFzTUNYTm9ZVzVrZVVCb2NEQ0NBU0l3RFFZSktvWklodmNOQVFFQgpCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFKRGYvdXhTZEh3MWV5RWFzTm5wa0NuUzQxeG9tWldPZ1FmOUY4TTlLMzJCCjBIY0xHOUxBUkN0SUg4Z1V4cHZKaDFUMmdMei9lUDFnd0NnSUVJTUZKcjg4d0lPVE50czlQUVFRcCttMDBhT2wKc2lMdmhXYjlCSm14ZzhnUmRJeU4wQUg0QW5KNm9wZ2tnbGQxdHVIZUVXcWd2dldzMFVpWXlaRUdXd2paSUNFNgpJMERTb3oxYXhvektza0RyOFBpR0RKelVuL2EzdmF1QVg2M3gzcnFTZ1dyRllLcFVDRTQrdFhnNUlXTEp2YThxClNSbjJ5OHIrdXBiRjhLcDJsVC9kVDJrWjBRVTRETU9paU5tUjZraFArOVdJbC8yMHZNMzdWSlRXbktrUC9uYWMKTXBRTFhDWWR3R1ExT1g4ZlU3dnZVWUlYanc5Nm54RE1uQk01cG5QbXRGTUNBd0VBQWFOck1Ha3dEZ1lEVlIwUApBUUgvQkFRREFnV2dNQk1HQTFVZEpRUU1NQW9HQ0NzR0FRVUZCd01CTUI4R0ExVWRJd1FZTUJhQUZHa2VWdXgzCldmLzFSR0QyWHJnYkQ2QUYxSTFzTUNFR0ExVWRFUVFhTUJpQ0NXdDFZbVV1ZEdWemRJSUxLaTVyZFdKbExuUmwKYzNRd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dHQkFLNVQ5MmpyaEhFZ2pMaUd0SCt0OUZJRnBya1NLd09TUW5oVApCbklEWmVwbTVFcVM1U2poTkZBUU5GZDIyT2FJMEVjRmlrWllSVUN6dUJCYWJWWUZLbGhnbUJJQysraEh0bDZECmRHdXlzM05GemtGd2l4RndWL1hCbS9aWDhLd3FSTk5LUzRIWHZSYWd2Ky9lcmZnMSsxWDhqeEZPZmU3aHV5VFUKcjlrbHhXM2pKVVhsZ296SHBtMjNNbnNMYzF5dEh4Y1kyMldmVmhsRDJuQjJuTlZQTXlhcS9seDNTckJDSERTUgpiODhvWk9jVGE1TGtNZjBlQi9TNGpjWWc0bWNzbGpRM0RCd1VlY2J2QWNvMmxvbU5WS294ZkJsYlBXeDdGSU80Cm5HQXNONjAxN21qVEk0MW9YZ0ZsUzZOeS9RTW9RWDNZVzhSMzF0VVhNbTdGcmNneHVmU3k0Nnp3NklBeTVoU0oKMnJHdTRPTDdSRkNzMnJaTlpwM1BvUloxMnhPdUJwbGdtakJYa2dOU2p5Zk9icXVWMmJKRTBwbmQ4VFdyKzBCcAp2VTl3QTgybkUydEw4dVRKZ1VsQnlkMkpvZ2tZczJidGhiNGJVcytENndDejJGUG5KS1Nydko2b3AxVzNycmhLCmlTVHYwL21FY2xmeGU4Y25YWlhqSmp3OHZ3amlodz09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQ1EzLzdzVW5SOE5Yc2gKR3JEWjZaQXAwdU5jYUptVmpvRUgvUmZEUFN0OWdkQjNDeHZTd0VRclNCL0lGTWFieVlkVTlvQzgvM2o5WU1BbwpDQkNEQlNhL1BNQ0RremJiUFQwRUVLZnB0TkdqcGJJaTc0Vm0vUVNac1lQSUVYU01qZEFCK0FKeWVxS1lKSUpYCmRiYmgzaEZxb0w3MXJORkltTW1SQmxzSTJTQWhPaU5BMHFNOVdzYU15ckpBNi9ENGhneWMxSi8ydDcycmdGK3QKOGQ2NmtvRnF4V0NxVkFoT1ByVjRPU0ZpeWIydktra1o5c3ZLL3JxV3hmQ3FkcFUvM1U5cEdkRUZPQXpEb29qWgprZXBJVC92VmlKZjl0THpOKzFTVTFweXBELzUybkRLVUMxd21IY0JrTlRsL0gxTzc3MUdDRjQ4UGVwOFF6SndUCk9hWno1clJUQWdNQkFBRUNnZ0VBY20vOXRqOEx0SEdxYVdQai9yMzRHcEZ5OXpQSTNkSkxLanhKNFBjWXUzTW4KY0dGZUFRUE8xVUdMbVVpUCtjOGZENFlIKzBMeUYzT3RWZkhJMlRYZ2ZYOUhzcWMrMWI5eHl4dzlCdWJHRWpaNAptQkFMbUdhVWs3TWRIWlJzTS9weExKenprZW85TldEaGRLU1BhYXM0cHJtREhoejgxQk9jWk9wWVRvejBURW1uCi80Y0hwMDA2aWJsRGhSZENpNUdpT0xhNWdTbjI4ZVhrcUdNdDZCRFgxOEh5VW8vdHNjM2paNnUyVjFoTHpJZFEKbk8zMFpIMmgzQjdnNWVlaitvL0lPSGlFL24xSDFxZ1ptb3lkdDNNdmJDb2NVM1VYc2VJbzlBRnF6R3RaT0dYeApNMzQyTEJKOWRYWHIwQ05Qc1NmSGpZNnJaUHRUYkorWFMwVFVaK3JkUVFLQmdRREFQN2NjTit0cG9hSWlYRC9ECjBTb2U5MXVqME5zZVRNUCtnaE9UOTl4OUROM2ZZdmJXMkQxMXdHVlgzWWZWcExMZkxSSlh3d0wvRGtXVzRWSVAKQnVJS3FlcVpSQm9mdmlLTk03akx1R25mYzhBUG9ycUhSbkt2R1pRd0Q1Z2d2S0N2eUlzVUlWa2pwOFgycDJacApEOEUwNE9QTFVPdE5YUXlHV0gyNU4rMnZGd0tCZ1FEQTZxUkJORUJRMFd6SGNmaWNPaldHZjdvRE1MbFZYeVdvCnFyTzdrcWFDY2ZQMDJxT1NPQWpSb2Exc09HV2RVMXk1WWZYNDU2YmgwZGdTalZMWFQ5NXFLNTRvNG1CbGxaVHkKK0lvbmNYalBIMUFsVG0zekNFR281STgzNEEzdTRLTklIbUp4cWtuWXRnSk5zU2VSNmpidU1yZC9taUZnZFcwNQplb0dKUFdhS0pRS0JnSG1WMGxEZWJOeFpoUmtHRHEzaFV5cFNkbnFjVkhoTlJJZHA3TWZnTW1wRUFPNk93RjRRClZJNXNKNnZ5Uno0dTg1R0NCOS9KVGRQUlN1R3BqeVJCemlQQVlzYWI4NG12emxwUEk4aHowVUdwQ3diWWUrK2gKOWxZWGIwa1dFN2hnazUrWXpaemxtbUthY1BFVjNnY0VGOFZCbGMrNFZaaVFDS1BPdzNTb2tvSHhBb0dBRHFFOAp0NTBveTNnMlVhRzVBcy8vUXlYb2kxbGtsSzdVZ2tmL3ZWZlB2TkM3ZVhRak4zRjhhYmxqRjNQbmNOampqVU42CmpkZXpkaWlkeERwbmIrQ2tzMVIvZUFaQzNURk16R2hBd2VEL0VtWURnL0RBc2MrTWV5eHFHQWlyeGRQUFRpYlAKdkdMM21yR2kxeFY2Tkx5WVVkUVN5bUI3NjM2OE84R29sU25NM3VrQ2dZQnNrcm4xeG50c1JxakdZVkR3ZW5yZwpURTh2T2dOMitLRUxrK0xXRE9XQmwwM2R1OTdWRVlaUDYvdHlzSVlnc00zRkp4a3hpM0haV3QwVVRES2VJYUVJCnRzaHU5Sk5wY0ZVaVgvMWEzVStsRCt5WjA1WDNOSXdBMXRPSE9ORFByQWNaYnFLOUIwMFplSzNnSlh1Z21wNWMKQWoxU0h5SmJzY2NzNHd0L2Y0YXFMQT09Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+---
+# INGRESS NGINX HTTP
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress-http
+  namespace: default
+  labels:
+    name: nginx-ingress
+  annotations:
+    # https://kubernetes.github.io/ingress-nginx/user-guide/tls/#server-side-https-enforcement-through-redirect
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#backend-protocol
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    # https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#enable-cors
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, Content-Type"
+    nginx.ingress.kubernetes.io/cors-expose-headers: ""
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "false"
+    nginx.ingress.kubernetes.io/cors-max-age: "600"
+spec:
+  tls:
+    - secretName: nginx-secret-tls
+      hosts:
+        - "*.kube.test"
+        - rest.kube.test
+        - kube.test
+  rules:
+    - host: rest.kube.test
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: rest-service
+                port:
+                  number: 80
+---
+# INGRESS NGINX GRPC
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress-grpc
+  namespace: default
+  labels:
+    name: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
+spec:
+  tls:
+    - secretName: nginx-secret-tls
+      hosts:
+        - "*.kube.test"
+        - grpc.kube.test
+        - kube.test
+  rules:
+    - host: grpc.kube.test
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: grpc-service
+                port:
+                  number: 80
