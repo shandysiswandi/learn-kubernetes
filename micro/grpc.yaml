@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc
+  template:
+    metadata:
+      labels:
+        app: grpc
+    spec:
+      containers:
+        - name: grpc
+          image: shandysiswandi/go-grpc:0.2.0
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "100Mi"
+            requests:
+              cpu: "50m"
+              memory: "50Mi"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-service
+spec:
+  selector:
+    app: grpc
+  ports:
+    - name: grpc
+      protocol: TCP
+      targetPort: 8080 # this port is run in pod
+      port: 80 # this port is run for service
